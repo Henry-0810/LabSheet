@@ -39,6 +39,7 @@ public class TestBook {
         textarea.append(output);
 
         JOptionPane.showMessageDialog(null,textarea,"Book Object Data",1);
+        System.exit(0);
     }
 
 }
