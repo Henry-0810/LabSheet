@@ -13,5 +13,6 @@ public class TestBook {
                 book2;
 
         JOptionPane.showMessageDialog(null,output,"Book Object Data",1);
+        System.exit(0);
     }
 }
