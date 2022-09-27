@@ -1,5 +1,7 @@
 package LabSheet4.exercise5;
 
+import java.util.Objects;
+
 public class Book {
     private String title;
     private double price;
@@ -37,19 +39,39 @@ public class Book {
     }
 
     public void setTitle(String title){
-        this.title = title;
+        if(Objects.equals(title, "")||Objects.isNull(title)){
+            this.title = "No Valid Title Supplied";
+        }
+        else{
+            this.title = title;
+        }
     }
 
     public void setPrice(double price){
-        this.price = price;
+        if(price < 0 || price > 50000){
+            this.price = 0;
+        }
+        else{
+            this.price = price;
+        }
     }
 
     public void setISBN(String ISBN){
-        this.ISBN = ISBN;
+        if(Objects.equals(ISBN, "")||Objects.isNull(ISBN)){
+            this.ISBN = "No Valid ISBN Supplied";
+        }
+        else{
+            this.ISBN = ISBN;
+        }
     }
 
     public void setPages(int pages){
-        this.pages = pages;
+        if(pages < 0 || pages > 4000){
+            this.pages = 0;
+        }
+        else{
+            this.pages = pages;
+        }
     }
 
     public String toString(){
