@@ -51,16 +51,16 @@ public class Thermometer {
     }
 
     public void setTemperature(int SetTemp){
-        SetTemp = getcTemp();
-        if(SetTemp == Integer.MAX_VALUE) this.maxTemp = SetTemp;
-        if(SetTemp == Integer.MIN_VALUE) this.minTemp = SetTemp;
+        setcTemp(SetTemp);
+        if(this.maxTemp == Integer.MAX_VALUE) this.maxTemp = SetTemp;
+        if(this.minTemp == Integer.MIN_VALUE) this.minTemp = SetTemp;
         updateMaxMinTemp(SetTemp);
     }
     //methods
-    private void updateMaxMinTemp(int setTemp){
-        if(setTemp > maxTemp)
-            this.maxTemp = setTemp;
-        if(setTemp < minTemp)
-            this.minTemp = setTemp;
+    private void updateMaxMinTemp(int CurrTemp){
+        if(CurrTemp > this.maxTemp)
+            this.maxTemp = CurrTemp;
+        if(CurrTemp < this.minTemp)
+            this.minTemp = CurrTemp;
     }
 }
