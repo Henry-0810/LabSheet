@@ -9,7 +9,7 @@ public class BankAccount {
     public BankAccount(){
         setOwner("Owner not Available");
         incrementCount();
-        setNumber(counts);
+        setNumber();
         setInterestRate(0);
 
     }
@@ -17,7 +17,7 @@ public class BankAccount {
     public BankAccount(String owner,  double interestRate){
         setOwner(owner);
         incrementCount();
-        setNumber(counts);
+        setNumber();
         setInterestRate(interestRate);
     }
 
@@ -25,24 +25,23 @@ public class BankAccount {
         return owner;
     }
 
-    public static int getNumber() {
-        return counts;
+    public int getNumber() {
+        return number;
     }
 
     public static double getInterestRate() {
         return interestRate;
     }
 
-    private static void incrementCount(){
-        counts++;
+    private  void incrementCount(){ counts++;
     }
 
     public void setOwner(String owner) {
         this.owner = owner;
     }
 
-    public static void setNumber(int number) {
-        counts = number;
+    private void setNumber() {
+        this.number = counts;
     }
 
     public static void setInterestRate(double interestRate) {
