@@ -29,7 +29,7 @@ public class Department {
 
     @Override
     public String toString() {
-        String str = "Name: "
+        String str = "Name: ";
         return "Name: " + getName() + "\nList of Students:\n\n " + getStudent();
     }
 }
