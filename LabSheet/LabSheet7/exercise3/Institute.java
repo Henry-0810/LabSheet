@@ -1,6 +1,5 @@
 package LabSheet7.exercise3;
 
-import java.util.Arrays;
 
 public class Institute {
     private String name;
@@ -29,9 +28,30 @@ public class Institute {
 
     @Override
     public String toString() {
-        return "Name: " + getName() + "\nDepartments: " + Arrays.toString(getDepartment());
+
+        StringBuilder dept = new StringBuilder();
+        for (Department dpt: getDepartment()) {
+            if (dpt != null) {
+                dept.append(dpt).append("\n");
+            }
+        }
+
+        return "Name: " + getName() + "\nDepartments: " + dept;
     }
 
+    public int getTotalStd(){
+        int totStd = 0;
+        for (Department dpt: getDepartment()) {
+            if (dpt != null) {
+                for (Student std: dpt.getStudent()) {
+                    if (std != null) {
+                        totStd++;
+                    }
+                }
+            }
+        }
+        return totStd;
+    }
 
 }
 

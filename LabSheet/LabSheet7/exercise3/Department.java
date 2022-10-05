@@ -1,7 +1,5 @@
 package LabSheet7.exercise3;
 
-import java.util.Arrays;
-
 public class Department {
     private String name;
     private Student[] student;
@@ -29,7 +27,14 @@ public class Department {
 
     @Override
     public String toString() {
-        String str = "Name: ";
-        return "Name: " + getName() + "\nList of Students:\n\n " + getStudent();
+
+        StringBuilder listOfStd = new StringBuilder();
+
+        for (Student students : getStudent()) {
+            if (students != null)
+                listOfStd.append(students).append("\n");
+        }
+
+        return "\nName: " + getName() + "\nList of Students: \n\n" + listOfStd;
     }
 }
