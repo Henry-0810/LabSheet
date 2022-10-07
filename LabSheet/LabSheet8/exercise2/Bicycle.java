@@ -1,6 +1,6 @@
-package LabSheet8.exercise1;
+package LabSheet8.exercise2;
 
-public class Bicycle extends Vehicle{
+public class Bicycle extends Vehicle {
     private int gearCount;
     private boolean hasBell;
 
@@ -10,8 +10,8 @@ public class Bicycle extends Vehicle{
         setGearCount(0);
     }
 
-    public Bicycle(double price,double length,double height,double weight,String manufacturer,
-                   String model,boolean hasBell,int gearCount){
+    public Bicycle(double price, double length, double height, double weight, String manufacturer,
+                   String model, boolean hasBell, int gearCount){
         super(price,length,height,weight,manufacturer,model);
         setHasBell(hasBell);
         setGearCount(gearCount);
